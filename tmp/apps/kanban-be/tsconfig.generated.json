@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "paths": {}
+  },
+  "extends": "..\\..\\..\\apps\\kanban-be\\tsconfig.app.json"
+}
