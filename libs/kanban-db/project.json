@@ -6,9 +6,10 @@
   "targets": {
     "generate-migrations": {
       "executor": "nx:run-commands",
+      "cwd": "libs/kanban-db",
       "options": {
         "commands": [
-          "node -e \"console.log('kanban-db:generate-migrations has run')\""
+          "drizzle-kit generate:mysql --config=\"./libs/kanban-db/drizzle.config.ts\""
         ]
       },
       "outputs": ["{projectRoot}/src/migrations/*.sql"]

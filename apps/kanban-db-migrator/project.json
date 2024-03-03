@@ -24,7 +24,7 @@
         "assets": [
           "apps/kanban-db-migrator/src/assets",
           {
-            "input": "libs/kanban-db/src/migrations",
+            "input": "libs/kanban-db/src/lib/migrations",
             "glob": "*.sql",
             "output": "./assets/migrations"
           }
