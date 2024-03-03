@@ -1,3 +1,7 @@
+:: Current version of nx sometimes hangs without this.
+$env:NX_NATIVE_COMMAND_RUNNER = "false"
+set env:NX_NATIVE_COMMAND_RUNNER = "false" 
+
 set path_to_root=%~dp0
 WHERE node >nul 2>nul
 IF %ERRORLEVEL% NEQ 0 (ECHO Nx requires NodeJS to be available. To install NodeJS and NPM, see: https://nodejs.org/en/download/ .; EXIT 1)
