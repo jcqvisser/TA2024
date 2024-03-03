@@ -1,0 +1,56 @@
+{
+  "name": "kanban-db-migrator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/kanban-db-migrator/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/kanban-db-migrator",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/kanban-db-migrator/src/main.ts",
+        "tsConfig": "apps/kanban-db-migrator/tsconfig.app.json",
+        "assets": ["apps/kanban-db-migrator/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "kanban-db-migrator:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "kanban-db-migrator:build:development"
+        },
+        "production": {
+          "buildTarget": "kanban-db-migrator:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
