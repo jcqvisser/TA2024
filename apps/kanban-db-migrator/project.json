@@ -21,14 +21,7 @@
         "bundle": false,
         "main": "apps/kanban-db-migrator/src/main.ts",
         "tsConfig": "apps/kanban-db-migrator/tsconfig.app.json",
-        "assets": [
-          "apps/kanban-db-migrator/src/assets",
-          {
-            "input": "libs/kanban-db/src/lib/migrations",
-            "glob": "*.sql",
-            "output": "./assets/migrations"
-          }
-        ],
+        "assets": ["apps/kanban-db-migrator/src/assets"],
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": true,
