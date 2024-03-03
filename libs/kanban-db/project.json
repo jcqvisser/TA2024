@@ -3,6 +3,16 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/kanban-db/src",
   "projectType": "library",
-  "targets": {},
+  "targets": {
+    "generate-migrations": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "node -e \"console.log('kanban-db:generate-migrations has run')\""
+        ]
+      },
+      "outputs": ["{projectRoot}/src/migrations/*.sql"]
+    }
+  },
   "tags": []
 }
