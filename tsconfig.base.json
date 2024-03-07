@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "kanban-api": ["libs/kanban-api/src/index.ts"],
       "kanban-db": ["libs/kanban-db/src/index.ts"],
       "kanban-ui": ["libs/kanban-ui/src/index.ts"]
     }
