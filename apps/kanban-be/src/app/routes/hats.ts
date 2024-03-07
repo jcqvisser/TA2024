@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { Static, Type, TypeBoxError } from '@sinclair/typebox';
+import { Static, Type } from '@sinclair/typebox';
 import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 
 export enum HatSize {

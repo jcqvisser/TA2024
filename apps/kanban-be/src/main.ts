@@ -1,8 +1,11 @@
 import Fastify from 'fastify';
 import { app } from './app/app';
+import { exitIfEnvIsInvalid } from './app/env';
 
-const host = process.env.HOST ?? 'localhost';
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+exitIfEnvIsInvalid();
+
+const host = process.env.KANBAN_BE_HOST;
+const port = Number(process.env.KANBAN_BE_PORT);
 
 // Instantiate Fastify with some config
 const server = Fastify({
