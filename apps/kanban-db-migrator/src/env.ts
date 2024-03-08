@@ -2,8 +2,9 @@ import { Static, Type } from '@sinclair/typebox';
 import { validateEnv } from 'env-validator';
 
 const envSchema = Type.Object({
-  KANBAN_BE_PORT: Type.String(),
-  KANBAN_BE_HOST: Type.String(),
+  KANBAN_DB_MIGRATOR_DB_HOST: Type.String(),
+  KANVEN_DB_MIGRATOR_USER: Type.String(),
+  KANVEN_DB_MIGRATOR_DATABASE: Type.String(),
 });
 
 type Env = Static<typeof envSchema>;
@@ -16,6 +17,6 @@ declare global {
   }
 }
 
-export function validateKanbanBeEnv() {
+export async function validateKanbanDbMigratorEnv() {
   validateEnv(envSchema);
 }

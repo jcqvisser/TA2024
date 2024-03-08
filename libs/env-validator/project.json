@@ -1,0 +1,8 @@
+{
+  "name": "env-validator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/env-validator/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": []
+}

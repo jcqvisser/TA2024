@@ -1,8 +1,8 @@
 import Fastify from 'fastify';
 import { app } from './app/app';
-import { exitIfEnvIsInvalid } from './app/env';
+import { validateKanbanBeEnv } from './app/env';
 
-exitIfEnvIsInvalid();
+validateKanbanBeEnv();
 
 const host = process.env.KANBAN_BE_HOST;
 const port = Number(process.env.KANBAN_BE_PORT);
